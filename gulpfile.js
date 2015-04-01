@@ -15,7 +15,7 @@ gulp.task('compile-src', function() {
       readableNames: true
     }))
     .pipe(gulp.dest('compiled'));
-})
+});
 
 gulp.task('watch', function() {
   gulp.watch(SRC_SCRIPTS_PATH, ['compile-src']);

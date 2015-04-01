@@ -2,7 +2,19 @@
 
 var R = require('ramda');
 
-function toThrowContractError(expected) {
+function isContractErr(err) {
+  return R.match(/contract violation/, err.message);
+}
+
+function tryCatch(fn, catchWith) {
+  try {
+    fn();
+  } catch(err) {
+    catchWith(err);
+  }
+}
+
+function toThrowContractError() {
   var result = false;
 
   tryCatch(this.actual, function(err) {
@@ -14,18 +26,6 @@ function toThrowContractError(expected) {
   }.bind(this));
 
   return result;
-}
-
-function tryCatch(fn, catchWith) {
-  try {
-    fn();
-  } catch(err) {
-    catchWith(err);
-  }
-}
-
-function isContractErr(err) {
-  return R.match(/contract violation/, err.message);
 }
 
 module.exports = {

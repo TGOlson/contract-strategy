@@ -1,11 +1,12 @@
-import @ from 'contracts.js'
+// import @ from 'contracts.js'
 
 'use strict';
 
 var R = require('ramda');
 
-var types  = require('./types'),
-    Eid    = types.Eid,
+var types  = require('./types');
+
+var Eid    = types.Eid,
     Entity = types.Entity;
 
 var registry = {};
