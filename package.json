@@ -22,6 +22,7 @@
   "dependencies": {
     "contracts-js": "^0.6.3",
     "gulp": "^3.8.11",
+    "gulp-sourcemaps": "^1.5.1",
     "gulp-sweetjs": "^0.6.0",
     "harmony-reflect": "^1.1.2",
     "jasmine-node": "^1.14.5",

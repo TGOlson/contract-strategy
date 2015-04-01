@@ -9,3 +9,4 @@ module.exports = {
     Eid: isEid,
     Entity: isEntity
 };
+//# sourceMappingURL=types.js.map
