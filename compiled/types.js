@@ -3,10 +3,14 @@ var R = require('ramda');
 var hasLengthOfTwoOrMore = R.compose(R.gte(2), R.length);
 var getIdSegments = R.split('/');
 var hasTwoOrMoreSegments = R.compose(hasLengthOfTwoOrMore, getIdSegments);
-var isEid = R.both(R.is(String), hasTwoOrMoreSegments);
-var isEntity = R.compose(isEid, R.prop('eid'));
+function Eid(val) {
+    return R.both(R.is(String), hasTwoOrMoreSegments)(val);
+}
+function Entity(val) {
+    return R.compose(Eid, R.prop('eid'))(val);
+}
 module.exports = {
-    Eid: isEid,
-    Entity: isEntity
+    Eid: Eid,
+    Entity: Entity
 };
 //# sourceMappingURL=types.js.map

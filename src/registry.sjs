@@ -1,5 +1,3 @@
-// Contract Configuration
-// Import library and require type definitions
 /* jshint ignore:start */
 import @ from 'contracts.js'
 
@@ -8,6 +6,7 @@ var types = require('./types');
 var Eid    = types.Eid,
     Entity = types.Entity;
 /* jshint ignore:end */
+
 
 'use strict';
 

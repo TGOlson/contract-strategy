@@ -1,9 +1,7 @@
-_c$2332 = function () {
+/* jshint ignore:start */
+_c$17888 = function () {
     'use strict';
-    if (// Contract Configuration
-        // Import library and require type definitions
-        /* jshint ignore:start */
-        typeof require === 'function') {
+    if (typeof require === 'function') {
         // importing patches Proxy to be in line with the new direct proxies
         require('harmony-reflect');
     }
@@ -595,21 +593,21 @@ var Eid = types.Eid, Entity = types.Entity;
 var R = require('ramda');
 var registry = {};
 var /* jshint ignore:start */
-inner_getFromRegistry = _c$2332.fun([typeof Eid !== 'undefined' ? Eid : _c$2332.Eid], _c$2332.or(typeof Void !== 'undefined' ? Void : _c$2332.Void, typeof Entity !== 'undefined' ? Entity : _c$2332.Entity)).proj(_c$2332.Blame.create('getFromRegistry', 'function getFromRegistry', '(calling context for getFromRegistry)', 24))(function getFromRegistry$2(eid) {
+inner_getFromRegistry = _c$17888.fun([typeof Eid !== 'undefined' ? Eid : _c$17888.Eid], _c$17888.or(typeof Void !== 'undefined' ? Void : _c$17888.Void, typeof Entity !== 'undefined' ? Entity : _c$17888.Entity)).proj(_c$17888.Blame.create('getFromRegistry', 'function getFromRegistry', '(calling context for getFromRegistry)', 23))(function getFromRegistry$2(eid) {
     return R.prop(eid, registry);
 });
 function getFromRegistry(eid) {
     return inner_getFromRegistry.apply(this, arguments);
 }
-var inner_hasInRegistry = _c$2332.fun([typeof /* jshint ignore:start */
-    Eid !== 'undefined' ? Eid : _c$2332.Eid], typeof Bool !== 'undefined' ? Bool : _c$2332.Bool).proj(_c$2332.Blame.create('hasInRegistry', 'function hasInRegistry', '(calling context for hasInRegistry)', 32))(function hasInRegistry$2(eid) {
+var inner_hasInRegistry = _c$17888.fun([typeof /* jshint ignore:start */
+    Eid !== 'undefined' ? Eid : _c$17888.Eid], typeof Bool !== 'undefined' ? Bool : _c$17888.Bool).proj(_c$17888.Blame.create('hasInRegistry', 'function hasInRegistry', '(calling context for hasInRegistry)', 31))(function hasInRegistry$2(eid) {
     return R.has(eid, registry);
 });
 function hasInRegistry(eid) {
     return inner_hasInRegistry.apply(this, arguments);
 }
-var inner_putToRegistry = _c$2332.fun([typeof /* jshint ignore:start */
-    Entity !== 'undefined' ? Entity : _c$2332.Entity], typeof Void !== 'undefined' ? Void : _c$2332.Void).proj(_c$2332.Blame.create('putToRegistry', 'function putToRegistry', '(calling context for putToRegistry)', 40))(function putToRegistry$2(entity) {
+var inner_putToRegistry = _c$17888.fun([typeof /* jshint ignore:start */
+    Entity !== 'undefined' ? Entity : _c$17888.Entity], typeof Void !== 'undefined' ? Void : _c$17888.Void).proj(_c$17888.Blame.create('putToRegistry', 'function putToRegistry', '(calling context for putToRegistry)', 39))(function putToRegistry$2(entity) {
     registry[entity.eid] = entity;
 });
 function putToRegistry(entity) {

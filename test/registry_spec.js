@@ -15,13 +15,13 @@ describe('Registry', function() {
   });
 
   it('should throw a contract error if passed a invalid entity', function() {
-    var getInvalidEid = Registry.put.bind(null, 'a/bcd', {});
-    expect(getInvalidEid).toThrowContractError();
+    var putInvalidEntity = Registry.put.bind(null, 'a/bcd', {});
+    expect(putInvalidEntity).toThrowContractError();
   });
 
   it('should be able to get and set entities in the registry', function() {
     var dummyData = {eid: '0/123'};
-    expect(Registry.get('0/123')).toBeUndefined();
+    expect(Registry.get('123')).toBeUndefined();
 
     Registry.put(dummyData);
     expect(Registry.get('0/123')).toBe(dummyData);

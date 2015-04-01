@@ -9,12 +9,16 @@ var getIdSegments = R.split('/');
 
 var hasTwoOrMoreSegments = R.compose(hasLengthOfTwoOrMore, getIdSegments);
 
-var isEid = R.both(R.is(String), hasTwoOrMoreSegments);
+function Eid(val) {
+  return R.both(R.is(String), hasTwoOrMoreSegments)(val);
+}
 
-var isEntity = R.compose(isEid, R.prop('eid'));
+function Entity(val) {
+  return R.compose(Eid, R.prop('eid'))(val);
+}
 
 
 module.exports = {
-  Eid: isEid,
-  Entity: isEntity
+  Eid: Eid,
+  Entity: Entity
 };
