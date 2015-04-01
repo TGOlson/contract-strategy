@@ -1,0 +1,30 @@
+{
+  "name": "contract-strategy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TGOlson/contract-strategy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TGOlson/contract-strategy/issues"
+  },
+  "homepage": "https://github.com/TGOlson/contract-strategy",
+  "dependencies": {
+    "contracts-js": "^0.6.3",
+    "gulp": "^3.8.11",
+    "gulp-sweetjs": "^0.6.0",
+    "harmony-reflect": "^1.1.2",
+    "jasmine-node": "^1.14.5",
+    "ramda": "^0.13.0"
+  }
+}
