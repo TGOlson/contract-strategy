@@ -3,7 +3,7 @@
 var Registry = require('../compiled/registry'),
     CustomMatchers = require('./custom-matchers');
 
-describe('Registry', function () {
+describe('Registry', function() {
 
   beforeEach(function() {
     this.addMatchers(CustomMatchers);
@@ -19,7 +19,7 @@ describe('Registry', function () {
     expect(getInvalidEid).toThrowContractError();
   });
 
-  it('should be able to get and set entities in the registry', function () {
+  it('should be able to get and set entities in the registry', function() {
     var dummyData = {eid: '0/123'};
     expect(Registry.get('0/123')).toBeUndefined();
 

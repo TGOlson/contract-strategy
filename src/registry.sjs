@@ -1,10 +1,10 @@
-// import @ from 'contracts.js'
+import @ from 'contracts.js'
 
 'use strict';
 
 var R = require('ramda');
 
-var types  = require('./types');
+var types = require('./types');
 
 var Eid    = types.Eid,
     Entity = types.Entity;
@@ -16,12 +16,12 @@ function getFromRegistry(eid) {
   return R.prop(eid, registry);
 }
 
-@ (Eid) -> Bool
+// @ (Eid) -> Bool
 function hasInRegistry(eid) {
   return R.has(eid, registry);
 }
 
-@ (Entity) -> Void
+// @ (Entity) -> Void
 function putToRegistry(entity) {
   registry[entity.eid] = entity;
 }
