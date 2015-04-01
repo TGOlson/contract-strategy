@@ -1,22 +1,30 @@
+// Contract Configuration
+// Import library and require type definitions
 /* jshint ignore:start */
 import @ from 'contracts.js'
-/* jshint ignore:end */
-
-'use strict';
-
-var R = require('ramda');
 
 var types = require('./types');
 
 var Eid    = types.Eid,
     Entity = types.Entity;
+/* jshint ignore:end */
+
+'use strict';
+
+
+var R = require('ramda');
+
 
 var registry = {};
 
-'@ Eid -> Void or Entity' // jshint ignore:line
+
+/* jshint ignore:start */
+@ (Eid) -> Void or Entity
+/* jshint ignore:end */
 function getFromRegistry(eid) {
   return R.prop(eid, registry);
 }
+
 
 /* jshint ignore:start */
 @ (Eid) -> Bool
@@ -25,12 +33,14 @@ function hasInRegistry(eid) {
   return R.has(eid, registry);
 }
 
+
 /* jshint ignore:start */
 @ (Entity) -> Void
 /* jshint ignore:end */
 function putToRegistry(entity) {
   registry[entity.eid] = entity;
 }
+
 
 module.exports = {
   get: getFromRegistry,
