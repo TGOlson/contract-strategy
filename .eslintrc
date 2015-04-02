@@ -1,4 +1,7 @@
 {
+  "plugins": [
+    "contractsjs"
+  ],
   "env": {
     "node": true,
     "jasmine": true

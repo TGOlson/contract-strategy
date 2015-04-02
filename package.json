@@ -21,6 +21,8 @@
   "homepage": "https://github.com/TGOlson/contract-strategy",
   "dependencies": {
     "contracts-js": "^0.6.3",
+    "eslint": "^0.18.0",
+    "eslint-plugin-contractsjs": "../eslint-plugin-contractsjs",
     "gulp": "^3.8.11",
     "gulp-sourcemaps": "^1.5.1",
     "gulp-sweetjs": "^0.6.0",
