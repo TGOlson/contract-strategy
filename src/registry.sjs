@@ -1,3 +1,4 @@
+// Contract Imports
 /* jshint ignore:start */
 import @ from 'contracts.js'
 
@@ -7,10 +8,11 @@ var Eid    = types.Eid,
     Entity = types.Entity;
 /* jshint ignore:end */
 
+// Begin core module code
+// Must be below the contract imports
 'use strict';
 
 var R = require('ramda');
-
 
 var registry = {};
 

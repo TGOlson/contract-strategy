@@ -1,22 +1,22 @@
 'use strict';
 
 var Registry = require('../compiled/registry'),
-    CustomMatchers = require('./custom-matchers');
+    ContractMatchers = require('./contract-matchers');
 
 describe('Registry', function() {
 
   beforeEach(function() {
-    this.addMatchers(CustomMatchers);
+    this.addMatchers(ContractMatchers);
   });
 
   it('should throw a contract error if passed a invalid eid', function() {
     var getInvalidEid = Registry.get.bind(null, 123);
-    expect(getInvalidEid).toThrowContractError();
+    expect(getInvalidEid).toThrowContractError('Eid');
   });
 
   it('should throw a contract error if passed a invalid entity', function() {
     var putInvalidEntity = Registry.put.bind(null, 'a/bcd', {});
-    expect(putInvalidEntity).toThrowContractError();
+    expect(putInvalidEntity).toThrowContractError('Entity');
   });
 
   it('should be able to get and set entities in the registry', function() {
