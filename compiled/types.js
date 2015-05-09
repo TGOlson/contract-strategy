@@ -8,13 +8,13 @@ var isEntity = R.compose(Eid, R.prop('eid'));
 var // Use named functions for better contract outputs
 // Unnamed functions or functions resulting from composition
 // results in cryptix or unnamed contract errors
-inner_Eid = _c$7565.fun([typeof Any !== 'undefined' ? Any : _c$7565.Any], typeof Bool !== 'undefined' ? Bool : _c$7565.Bool).proj(_c$7565.Blame.create('Eid', 'function Eid', '(calling context for Eid)', 22))(function Eid$2(val) {
+inner_Eid = _c$5102.fun([typeof Any !== 'undefined' ? Any : _c$5102.Any], typeof Bool !== 'undefined' ? Bool : _c$5102.Bool).proj(_c$5102.Blame.create('Eid', 'function Eid', '(calling context for Eid)', 22))(function Eid$2(val) {
     return isEid(val);
 });
 function Eid(val) {
     return inner_Eid.apply(this, arguments);
 }
-var inner_Entity = _c$7565.fun([typeof Any !== 'undefined' ? Any : _c$7565.Any], typeof Bool !== 'undefined' ? Bool : _c$7565.Bool).proj(_c$7565.Blame.create('Entity', 'function Entity', '(calling context for Entity)', 27))(function Entity$2(val) {
+var inner_Entity = _c$5102.fun([typeof Any !== 'undefined' ? Any : _c$5102.Any], typeof Bool !== 'undefined' ? Bool : _c$5102.Bool).proj(_c$5102.Blame.create('Entity', 'function Entity', '(calling context for Entity)', 27))(function Entity$2(val) {
     return isEntity(val);
 });
 function Entity(val) {

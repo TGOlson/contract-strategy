@@ -1,6 +1,4 @@
-// Contract Imports
-/* jshint ignore:start */
-_c$5102 = function () {
+module.exports = _c$1479 = function () {
     'use strict';
     if (typeof require === 'function') {
         // importing patches Proxy to be in line with the new direct proxies
@@ -587,35 +585,4 @@ _c$5102 = function () {
         guard: guard
     };
 }();
-var types = require('./types');
-var Eid = types.Eid, Entity = types.Entity;
-/* jshint ignore:end */
-// Begin core module code
-// Must be below the contract imports
-'use strict';
-var R = require('ramda');
-var registry = {};
-var inner_getFromRegistry = _c$5102.fun([typeof Eid !== 'undefined' ? Eid : _c$5102.Eid], _c$5102.or(typeof Void !== 'undefined' ? Void : _c$5102.Void, typeof Entity !== 'undefined' ? Entity : _c$5102.Entity)).proj(_c$5102.Blame.create('getFromRegistry', 'function getFromRegistry', '(calling context for getFromRegistry)', 21))(function getFromRegistry$2(eid) {
-    return R.prop(eid, registry);
-});
-function getFromRegistry(eid) {
-    return inner_getFromRegistry.apply(this, arguments);
-}
-var inner_hasInRegistry = _c$5102.fun([typeof Eid !== 'undefined' ? Eid : _c$5102.Eid], typeof Bool !== 'undefined' ? Bool : _c$5102.Bool).proj(_c$5102.Blame.create('hasInRegistry', 'function hasInRegistry', '(calling context for hasInRegistry)', 27))(function hasInRegistry$2(eid) {
-    return R.has(eid, registry);
-});
-function hasInRegistry(eid) {
-    return inner_hasInRegistry.apply(this, arguments);
-}
-var inner_putToRegistry = _c$5102.fun([typeof Entity !== 'undefined' ? Entity : _c$5102.Entity], typeof Void !== 'undefined' ? Void : _c$5102.Void).proj(_c$5102.Blame.create('putToRegistry', 'function putToRegistry', '(calling context for putToRegistry)', 33))(function putToRegistry$2(entity) {
-    registry[entity.eid] = entity;
-});
-function putToRegistry(entity) {
-    return inner_putToRegistry.apply(this, arguments);
-}
-module.exports = {
-    get: getFromRegistry,
-    has: hasInRegistry,
-    put: putToRegistry
-};
-//# sourceMappingURL=registry.js.map
+//# sourceMappingURL=contracts.js.map
