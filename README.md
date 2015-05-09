@@ -2,11 +2,15 @@ Strategy for implementing contracts in a production JavaScript project.
 
 Uses `contracts-js` for the contracts library. `contracts-js` is built on top of `sweetjs`, and as such certain build considerations much be taken into account.
 
-Raw uncompiled code lives in `src/`, and gets compiled to `compiled/` via a `gulp` task.
+Raw uncompiled code lives in `src/`, and gets compiled to `compiled/` via a `gulp` task. Compiled code should probably be git-ignored, and compiled on-demand via post-installs.
 
 The gulp task watches for any changes in the `src/` directory, and upon change recompiles the raw code.
 
 The unit tests all must run against the compiled code, and are therefore pointed toward the `compiled/` directory.
+
+```js
+var Registry = require('../compiled/registry');
+```
 
 Notes:
 
