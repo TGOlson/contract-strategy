@@ -1,6 +1,6 @@
 // Contract Imports
 /* jshint ignore:start */
-_c$2342 = function () {
+_c$7565 = function () {
     'use strict';
     if (typeof require === 'function') {
         // importing patches Proxy to be in line with the new direct proxies
@@ -595,19 +595,19 @@ var Eid = types.Eid, Entity = types.Entity;
 'use strict';
 var R = require('ramda');
 var registry = {};
-var inner_getFromRegistry = _c$2342.fun([typeof Eid !== 'undefined' ? Eid : _c$2342.Eid], _c$2342.or(typeof Void !== 'undefined' ? Void : _c$2342.Void, typeof Entity !== 'undefined' ? Entity : _c$2342.Entity)).proj(_c$2342.Blame.create('getFromRegistry', 'function getFromRegistry', '(calling context for getFromRegistry)', 21))(function getFromRegistry$2(eid) {
+var inner_getFromRegistry = _c$7565.fun([typeof Eid !== 'undefined' ? Eid : _c$7565.Eid], _c$7565.or(typeof Void !== 'undefined' ? Void : _c$7565.Void, typeof Entity !== 'undefined' ? Entity : _c$7565.Entity)).proj(_c$7565.Blame.create('getFromRegistry', 'function getFromRegistry', '(calling context for getFromRegistry)', 21))(function getFromRegistry$2(eid) {
     return R.prop(eid, registry);
 });
 function getFromRegistry(eid) {
     return inner_getFromRegistry.apply(this, arguments);
 }
-var inner_hasInRegistry = _c$2342.fun([typeof Eid !== 'undefined' ? Eid : _c$2342.Eid], typeof Bool !== 'undefined' ? Bool : _c$2342.Bool).proj(_c$2342.Blame.create('hasInRegistry', 'function hasInRegistry', '(calling context for hasInRegistry)', 27))(function hasInRegistry$2(eid) {
+var inner_hasInRegistry = _c$7565.fun([typeof Eid !== 'undefined' ? Eid : _c$7565.Eid], typeof Bool !== 'undefined' ? Bool : _c$7565.Bool).proj(_c$7565.Blame.create('hasInRegistry', 'function hasInRegistry', '(calling context for hasInRegistry)', 27))(function hasInRegistry$2(eid) {
     return R.has(eid, registry);
 });
 function hasInRegistry(eid) {
     return inner_hasInRegistry.apply(this, arguments);
 }
-var inner_putToRegistry = _c$2342.fun([typeof Entity !== 'undefined' ? Entity : _c$2342.Entity], typeof Void !== 'undefined' ? Void : _c$2342.Void).proj(_c$2342.Blame.create('putToRegistry', 'function putToRegistry', '(calling context for putToRegistry)', 33))(function putToRegistry$2(entity) {
+var inner_putToRegistry = _c$7565.fun([typeof Entity !== 'undefined' ? Entity : _c$7565.Entity], typeof Void !== 'undefined' ? Void : _c$7565.Void).proj(_c$7565.Blame.create('putToRegistry', 'function putToRegistry', '(calling context for putToRegistry)', 33))(function putToRegistry$2(entity) {
     registry[entity.eid] = entity;
 });
 function putToRegistry(entity) {

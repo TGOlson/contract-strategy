@@ -9,15 +9,23 @@ var getIdSegments = R.split('/');
 
 var hasTwoOrMoreSegments = R.compose(hasLengthOfTwoOrMore, getIdSegments);
 
-// Use named functions for better contract outputs
 
+var isEid = R.both(R.is(String), hasTwoOrMoreSegments);
+
+var isEntity = R.compose(Eid, R.prop('eid'));
+
+
+// Use named functions for better contract outputs
+// Unnamed functions or functions resulting from composition
+// results in cryptix or unnamed contract errors
+@ (Any) -> Bool
 function Eid(val) {
-  return R.both(R.is(String), hasTwoOrMoreSegments)(val);
+  return isEid(val);
 }
 
 @ (Any) -> Bool
 function Entity(val) {
-  return R.compose(Eid, R.prop('eid'))(val);
+  return isEntity(val);
 }
 
 module.exports = {
